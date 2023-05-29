@@ -24,7 +24,7 @@ const oldMarketCaps = Object.values(oldjson)
 
 oldMarketCaps.push({
     date: Date.now(),
-    date: filteredMarketCaps
+    data: filteredMarketCaps
 })
 
 // Step 3. Write a new JSON file with our filtered data
