@@ -29,8 +29,8 @@ oldMarketCaps.push({
 
 // Step 3. Write a new JSON file with our filtered data
 const newFilename = `market-cap-postprocessed.json` // name of a new file to be saved
-await writeJSON(newFilename, filteredMarketCaps) // create a new JSON file with just the Bitcoin price
+await writeJSON(newFilename, oldMarketCaps) // create a new JSON file with just the Bitcoin price
 console.log("Wrote a post process file")
 
 // Optionally delete the original file
-// await removeFile('./btc-price.json') // equivalent to removeFile('btc-price.json')
+await removeFile('./market-caps.json') // equivalent to removeFile('btc-price.json')
