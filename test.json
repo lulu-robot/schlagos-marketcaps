@@ -1,7 +1,7 @@
 [
   {
-    date: 1685369652879,
-    data: [
+    "date": 1685369652879,
+    "data": [
     {
         "id": "bitcoin",
         "symbol": "btc",
