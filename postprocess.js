@@ -17,7 +17,6 @@ const filteredMarketCaps = marketCaps.map(rate => ({
     id: rate.id,
     symbol: rate.symbol,
   name: rate.name,
-  image: rate.image,
   market_cap: rate.market_cap,
 }));
 const oldMarketCaps = Object.values(oldjson)
