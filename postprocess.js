@@ -9,7 +9,7 @@ const filename = Deno.args[0] // Same name as downloaded_filename `const filenam
 const existingJsonFileName = `market-cap-postprocessed.json`
 const oldjson = await readJSON(existingJsonFileName)
 const json = await readJSON(filename)
-console.log(json)
+// console.log(json)
 
 // Step 2: Filter specific data we want to keep and write to a new JSON file
 const marketCaps = Object.values(json); // convert property values into an array
