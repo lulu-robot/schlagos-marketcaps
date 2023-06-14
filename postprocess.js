@@ -27,12 +27,13 @@ oldMarketCaps.push({
 })
 
 // only keep 7 last days
-oldMarketCaps = oldMarketCaps.slice(Math.max(oldMarketCaps.length - 7, 0));
+const slicedOldMarketCaps = oldMarketCaps.slice(Math.max(oldMarketCaps.length - 7, 0));
 
 // Step 3. Write a new JSON file with our filtered data
 const newFilename = `market-cap-postprocessed.json` // name of a new file to be saved
-await writeJSON(newFilename, oldMarketCaps) // create a new JSON file with just the Bitcoin price
+await writeJSON(newFilename, slicedOldMarketCaps) // create a new JSON file with just the Bitcoin price
 console.log("Wrote a post process file")
 
 // Optionally delete the original file
-await removeFile('./market-caps.json') // equivalent to removeFile('btc-price.json')
+// We keep it if for some reason the workflow fail so we can manually rebuild json file 
+// await removeFile('./market-caps.json') // equivalent to removeFile('btc-price.json')
