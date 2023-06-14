@@ -26,6 +26,9 @@ oldMarketCaps.push({
     data: filteredMarketCaps
 })
 
+// only keep 7 last days
+oldMarketCaps = oldMarketCaps.slice(Math.max(oldMarketCaps.length - 7, 0));
+
 // Step 3. Write a new JSON file with our filtered data
 const newFilename = `market-cap-postprocessed.json` // name of a new file to be saved
 await writeJSON(newFilename, oldMarketCaps) // create a new JSON file with just the Bitcoin price
